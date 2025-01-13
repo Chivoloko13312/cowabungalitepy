@@ -3876,13 +3876,6 @@ QComboBox QAbstractItemView::item:hover {
                   </widget>
                  </item>
                  <item>
-                  <widget class="QCheckBox" name="enableWiFiDebuggerChk">
-                   <property name="text">
-                    <string>Show WiFi Debugger</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
                   <widget class="QCheckBox" name="enableShutdownSoundChk">
                    <property name="text">
                     <string>Play Sound on Shutdown</string>

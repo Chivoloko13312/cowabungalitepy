@@ -2110,11 +2110,6 @@ class Ui_CowabungaLite(object):
 
         self._2.addWidget(self.line_16)
 
-        self.enableWiFiDebuggerChk = QCheckBox(self.springboardOptionsPageContent)
-        self.enableWiFiDebuggerChk.setObjectName(u"enableWiFiDebuggerChk")
-
-        self._2.addWidget(self.enableWiFiDebuggerChk)
-
         self.enableShutdownSoundChk = QCheckBox(self.springboardOptionsPageContent)
         self.enableShutdownSoundChk.setObjectName(u"enableShutdownSoundChk")
 
@@ -2743,7 +2738,6 @@ class Ui_CowabungaLite(object):
         self.disableBatteryAlertsChk.setText(QCoreApplication.translate("CowabungaLite", u"Disable Low Battery Alerts", None))
         self.disableCrumbChk.setText(QCoreApplication.translate("CowabungaLite", u"Disable Breadcrumbs", None))
         self.enableSupervisionTextChk.setText(QCoreApplication.translate("CowabungaLite", u"Show Supervision Text on Lock Screen", None))
-        self.enableWiFiDebuggerChk.setText(QCoreApplication.translate("CowabungaLite", u"Show WiFi Debugger", None))
         self.enableShutdownSoundChk.setText(QCoreApplication.translate("CowabungaLite", u"Play Sound on Shutdown", None))
         self.allowAirDropEveryoneChk.setText(QCoreApplication.translate("CowabungaLite", u"Permanently Allow Receiving AirDrop from Everyone", None))
         self.internalOptionsLbl.setText(QCoreApplication.translate("CowabungaLite", u"Internal Options", None))

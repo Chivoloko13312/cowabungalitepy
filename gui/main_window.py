@@ -98,7 +98,6 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.disableBatteryAlertsChk.toggled.connect(self.on_disableBatteryAlertsChk_clicked)
         self.ui.disableCrumbChk.toggled.connect(self.on_disableCrumbChk_clicked)
         self.ui.enableSupervisionTextChk.toggled.connect(self.on_enableSupervisionTextChk_clicked)
-        self.ui.enableWiFiDebuggerChk.toggled.connect(self.on_enableWiFiDebuggerChk_clicked)
         self.ui.enableShutdownSoundChk.toggled.connect(self.on_enableShutdownSoundChk_clicked)
         self.ui.allowAirDropEveryoneChk.toggled.connect(self.on_allowAirDropEveryoneChk_clicked)
 
@@ -911,8 +910,6 @@ class MainWindow(QtWidgets.QMainWindow):
         self.set_key("SBNeverBreadcrumb", checked, FileLocation.springboard)
     def on_enableSupervisionTextChk_clicked(self, checked: bool):
         self.set_key("SBShowSupervisionTextOnLockScreen", checked, FileLocation.springboard)
-    def on_enableWiFiDebuggerChk_clicked(self, checked: bool):
-        self.set_key("WiFiManagerLoggingEnabled", checked, FileLocation.wifi_debug)
     def on_enableShutdownSoundChk_clicked(self, checked: bool):
         self.set_sb_key("Accessibility", checked, FileLocation.accessibility)
 
@@ -957,10 +954,6 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui.disableCrumbChk.setChecked(value if value else False)
         value = get_plist_value(location, "SBShowSupervisionTextOnLockScreen")
         self.ui.enableSupervisionTextChk.setChecked(value if value else False)
-
-        location = os.path.join(ws, FileLocation.wifi_debug.value)
-        value = get_plist_value(location, "WiFiManagerLoggingEnabled")
-        self.ui.enableWiFiDebuggerChk.setChecked(value if value else False)
 
         location = os.path.join(ws, FileLocation.accessibility.value)
         value = get_plist_value(location, "StartupSoundEnabled")
