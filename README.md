@@ -1,4 +1,4 @@
-# Cowabunga Lite Py
+# Cowabunga Lite 
 
 The *(unfinished)* Python rewrite of Cowabunga Lite. Works on Windows, macOS, and Linux.
 
